@@ -12,7 +12,7 @@ stages:
   Acceptance:
     cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "rpdev"
+    cfOrg: "agdev"
     cfSpace: "dev"
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
@@ -23,12 +23,12 @@ stages:
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "rpdev"
+    cfOrg: "agdev"
     cfSpace: "dev"
     cfAppName: "app"
     cfCredentialsId: "deploy-to-cf"
     deployType: "standard"
-    tmsUpload: false
+    tmsUpload: true
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
