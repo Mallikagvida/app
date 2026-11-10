@@ -8,17 +8,15 @@
     "node": "^18"
   },
   "dependencies": {
-    "@sap/cds": "^8.0.0",
-    "@sap/audit-logging": "5.7.1",
-    "hdb": "^0.19",
-
     "@sap-cloud-sdk/http-client": "latest",
+    "@sap/audit-logging": "5.7.1",
+    "@sap/cds": "^8.0.0",
     "@sap/xsenv": "^3",
     "@sap/xssec": "^3",
-    "passport": "^0.4.1",
-
     "debug": "^4.3",
-    "express": "^4"
+    "express": "^4",
+    "hdb": "^0.19",
+    "passport": "^0.7.0"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.96.4"
@@ -84,19 +82,18 @@
             }
           }
         }
-      }
-      ,
+      },
       "db": {
         "[production]": {
-          "kind": "hana-cloud"
-          ,"model": [
+          "kind": "hana-cloud",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
         },
         "[development]": {
-          "kind": "sql"
-          ,"model": [
+          "kind": "sql",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
@@ -105,8 +102,7 @@
           "db",
           "srv"
         ]
-      }
-      ,
+      },
       "NearEarthObjectWebService": {
         "kind": "rest",
         "impl": "srv/external/NearEarthObjectWebService.js",
